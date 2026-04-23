@@ -332,9 +332,9 @@ function updateHeroSection(t) {
     // Introduction paragraph - preserving links
     const introPara = document.querySelector('.hero-content p');
     if (introPara) {
-        const collegeLink = introPara.querySelector('a[href*="ise.hhu.edu.cn"]');
-        const hhuLink = introPara.querySelector('a[href*="www.hhu.edu.cn"]');
-        const prof1Link = introPara.querySelector('a[href*="ghm"]');
+        const collegeLink = introPara.querySelector('a[href*="https://computer.juwp.edu.cn/index.htm"]');
+        const hhuLink = introPara.querySelector('a[href*="https://www.juwp.edu.cn/"]');
+        const prof1Link = introPara.querySelector('a[href*="https://computer.juwp.edu.cn/info/1059/1911.htm"]');
         // const prof2Link = introPara.querySelector('a[href*="lcm"]');
         
         // if (collegeLink && hhuLink && prof1Link && prof2Link)

@@ -335,14 +335,15 @@ function updateHeroSection(t) {
         const collegeLink = introPara.querySelector('a[href*="ise.hhu.edu.cn"]');
         const hhuLink = introPara.querySelector('a[href*="www.hhu.edu.cn"]');
         const prof1Link = introPara.querySelector('a[href*="ghm"]');
-        const prof2Link = introPara.querySelector('a[href*="lcm"]');
+        // const prof2Link = introPara.querySelector('a[href*="lcm"]');
         
-        if (collegeLink && hhuLink && prof1Link && prof2Link) {
+        // if (collegeLink && hhuLink && prof1Link && prof2Link)
+        if (collegeLink && hhuLink && prof1Link ){
             // Clone links to preserve attributes
             const collegeClone = collegeLink.cloneNode(true);
             const hhuClone = hhuLink.cloneNode(true);
             const prof1Clone = prof1Link.cloneNode(true);
-            const prof2Clone = prof2Link.cloneNode(true);
+            // const prof2Clone = prof2Link.cloneNode(true);
             
             // Update link text
             collegeClone.textContent = t.hero.collegeOf;
@@ -354,16 +355,16 @@ function updateHeroSection(t) {
                 introPara.innerHTML = `
                     我是${hhuClone.outerHTML}${collegeClone.outerHTML}的博士研究生，导师为
                     ${prof1Clone.outerHTML}
-                    教授和
-                    ${prof2Clone.outerHTML}研究员。
+                    教授
+                    // ${prof2Clone.outerHTML}研究员。
                     我的研究专注于将深度学习技术与遥感数据分析相结合，设计智能化的图像处理算法，将人工智能方法用于遥感图像解译工作。
                 `;
             } else {
                 introPara.innerHTML = `
                     I am a graduate student at the ${collegeClone.outerHTML}, ${hhuClone.outerHTML}, supervised by 
                     ${prof1Clone.outerHTML} 
-                    and 
-                    ${prof2Clone.outerHTML}.
+                    // and 
+                    // ${prof2Clone.outerHTML}.
                     My research focuses on developing advanced artificial intelligence methods for remote sensing image interpretation, 
                     integrating deep learning techniques with remote sensing data analysis to develop intelligent systems for automated image interpretation.
                 `;

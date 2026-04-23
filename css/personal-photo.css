@@ -1,0 +1,238 @@
+/* ===== Personal Photo Styles ===== */
+
+/* Personal Photo Container */
+.personal-photo-container {
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/*.profile-photo {*/
+/*    width: 280px;*/
+/*    height: 280px;*/
+/*    border-radius: 50%;*/
+/*    object-fit: cover;*/
+/*    border: 5px solid rgba(0, 86, 179, 0.15);*/
+/*    box-shadow: 0 10px 30px rgba(0, 86, 179, 0.2), 0 0 0 15px rgba(0, 86, 179, 0.05);*/
+/*    background: #ffffff;*/
+/*}*/
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 12px; /* 适度的圆角看起来最专业 */
+    object-fit: cover;
+    border: 1px solid rgba(0, 86, 179, 0.1); /* 减薄边框 */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* 更柔和的阴影 */
+    background: #ffffff;
+}
+
+/* Photo Overlay - Removed */
+
+/* Profile Info */
+.profile-info {
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a202c !important;
+    transition: color 0.3s ease;
+}
+
+.profile-title {
+    font-size: 1rem;
+    color: #0056b3 !important;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.profile-university {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #4a5568 !important;
+    gap: 0.5rem;
+}
+
+.profile-university i {
+    color: #0056b3 !important;
+}
+
+/* Hero Content Adjustments */
+.hero-content {
+}
+
+.hero-content h1 {
+    font-size: clamp(1.8rem, 2.5rem, 3rem);
+    line-height: 1.2;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.1rem, 1.3rem, 1.5rem);
+}
+
+.hero-content h3 {
+    font-size: clamp(1rem, 1.1rem, 1.3rem);
+}
+
+.hero-content .lead {
+    font-size: clamp(1rem, 1.1rem, 1.25rem);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .profile-photo {
+    border-color: rgba(77, 171, 247, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .profile-name {
+    color: var(--hero-text-primary);
+}
+
+[data-theme="dark"] .profile-title {
+    color: var(--hero-button-bg);
+}
+
+[data-theme="dark"] .profile-university {
+    color: var(--hero-text-secondary);
+}
+
+[data-theme="dark"] .profile-university i {
+    color: var(--hero-button-bg);
+}
+
+/* Photo Modal Styles - Removed */
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .profile-photo {
+        width: 240px;
+        height: 240px;
+    }
+
+    .profile-name {
+        font-size: 1.3rem;
+    }
+
+    .profile-title {
+        font-size: 0.9rem;
+    }
+
+    .profile-university {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .personal-photo-container {
+        margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-name {
+        font-size: 1.2rem;
+    }
+
+    .profile-title {
+        font-size: 0.9rem;
+    }
+
+    .profile-university {
+        font-size: 0.8rem;
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    .hero-content .d-flex {
+        justify-content: center !important;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-name {
+        font-size: 1.1rem;
+    }
+
+    .profile-title {
+        font-size: 0.85rem;
+    }
+
+    .profile-university {
+        font-size: 0.75rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animation - Removed */
+
+/* Loading State - Removed */
+
+/* Accessibility */
+.profile-photo:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Print Styles */
+@media print {
+    .profile-photo {
+        box-shadow: none !important;
+    }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-photo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Touch Device Support - Removed */

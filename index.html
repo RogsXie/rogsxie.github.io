@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "jobTitle": "PhD Student",
+        "affiliation": {
+            "@type": "EducationalOrganization",
+            "name": "School of Information Science and Engineering, Hohai University",
+            "url": "https://www.hhu.edu.cn"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Hohai University"
+        },
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Remote Sensing Image Interpretation",
+            "Deep Learning",
+            "Computer Vision",
+            "Pattern Recognition"
+        ],
+        "description": "PhD student specializing in AI-based remote sensing image interpretation",
+        "url": "https://yourusername.github.io",
+        "sameAs": [
+            "https://github.com/yourusername",
+            "https://scholar.google.com/citations?user=yourid",
+            "https://www.researchgate.net/profile/yourprofile"
+        ]
+    }
+    </script>
+
+    <!-- Title -->
+    <title>Personal Homepage - Hohai University | AI & Remote Sensing Research</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons - Multiple CDN Fallbacks -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+        id="fontawesome-primary">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"
+        id="fontawesome-backup1" media="none" onload="if(media!='all')media='all'">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+        id="fontawesome-backup2" media="none" onload="if(media!='all')media='all'">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/academic.css" rel="stylesheet">
+    <link href="css/local-icons.css" rel="stylesheet">
+    <link href="css/personal-photo.css" rel="stylesheet">
+
+    <!-- About Me卡片主题适配样式 -->
+    <style>
+        /* 白天模式：确保文字可见 */
+        .about-card-text,
+        .about-card-text li {
+            color: #2d3748 !important;
+        }
+
+        /* 标题颜色 */
+        .about-card-title {
+            color: #0056b3 !important;
+        }
+
+        /* 暗黑模式：所有文字统一为浅色 */
+        [data-theme="dark"] .about-card-text,
+        [data-theme="dark"] .about-card-text li {
+            color: #e9ecef !important;
+        }
+
+        /* 暗黑模式：标题颜色 */
+        [data-theme="dark"] .about-card-title {
+            color: #4dabf7 !important;
+        }
+
+        /* 暗黑模式：调整卡片背景 */
+        [data-theme="dark"] .about-card {
+            background: rgba(45, 55, 72, 0.5) !important;
+            border-color: rgba(77, 171, 247, 0.3) !important;
+        }
+
+        /* 作者名字高亮样式 - 白天模式 */
+        .publication-authors strong[style*="color: #0056b3"] {
+            color: #0056b3 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 作者名字高亮样式 - 暗黑模式 */
+        [data-theme="dark"] .publication-authors strong[style*="color: #0056b3"] {
+            color: #4dabf7 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 期刊信息徽章 - 白天模式增强显示 */
+        .publication-venue .badge.bg-success {
+            background-color: #28a745 !important;
+            color: white !important;
+            box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+        }
+
+        /* 期刊信息徽章 - 暗黑模式 */
+        [data-theme="dark"] .publication-venue .badge.bg-success {
+            background-color: #51cf66 !important;
+            color: #1a1a1a !important;
+            box-shadow: 0 2px 4px rgba(81, 207, 102, 0.4);
+            font-weight: 600 !important;
+        }
+
+        /* 引用次数高亮显示 - 白天模式 */
+        .citation-link-highlight {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%) !important;
+            color: white !important;
+            border: none !important;
+            font-weight: 500 !important;
+            font-size: 0.75rem !important;
+            padding: 0.25rem 0.5rem !important;
+            box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .citation-link-highlight:hover {
+            background: linear-gradient(135deg, #ff5252 0%, #f44336 100%) !important;
+            box-shadow: 0 2px 6px rgba(255, 82, 82, 0.4) !important;
+            transform: translateY(-1px) !important;
+            color: white !important;
+        }
+
+        .citation-link-highlight .citation-count {
+            font-size: 0.95em !important;
+            font-weight: 600 !important;
+        }
+
+        .citation-link-highlight .citation-label {
+            font-size: 0.85em !important;
+        }
+
+        /* 引用次数高亮显示 - 暗黑模式 */
+        [data-theme="dark"] .citation-link-highlight {
+            background: linear-gradient(135deg, #ff8787 0%, #ff6b9d 100%) !important;
+            color: #1a1a1a !important;
+            border: none !important;
+            font-weight: 600 !important;
+            font-size: 0.75rem !important;
+            padding: 0.25rem 0.5rem !important;
+            box-shadow: 0 2px 4px rgba(255, 135, 135, 0.4) !important;
+        }
+
+        [data-theme="dark"] .citation-link-highlight:hover {
+            background: linear-gradient(135deg, #ffa8a8 0%, #ff8fab 100%) !important;
+            box-shadow: 0 2px 6px rgba(255, 168, 168, 0.5) !important;
+            transform: translateY(-1px) !important;
+            color: #0d0d0d !important;
+        }
+
+        [data-theme="dark"] .citation-link-highlight .citation-count {
+            font-size: 0.95em !important;
+            font-weight: 700 !important;
+        }
+
+        [data-theme="dark"] .citation-link-highlight .citation-label {
+            font-size: 0.85em !important;
+        }
+
+        /* 导师链接样式 - 白天模式 - 强化版本 */
+        .supervisor-link {
+            color: #0056b3 !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            border-bottom: 1px dotted #0056b3 !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer !important;
+            pointer-events: auto !important;
+            display: inline !important;
+            position: relative !important;
+            z-index: 1000 !important;
+            user-select: auto !important;
+            -webkit-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            background: transparent !important;
+            padding: 2px 4px !important;
+            border-radius: 3px !important;
+            line-height: inherit !important;
+            vertical-align: baseline !important;
+        }
+
+        /* 确保导师链接的子元素也不会阻止点击 */
+        .supervisor-link * {
+            pointer-events: none !important;
+            cursor: pointer !important;
+        }
+
+        .supervisor-link:hover {
+            color: #003d82 !important;
+            border-bottom: 1px solid #003d82 !important;
+            background-color: rgba(0, 86, 179, 0.05) !important;
+            text-decoration: none !important;
+        }
+
+        .supervisor-link:focus {
+            outline: 2px solid #0056b3 !important;
+            outline-offset: 2px !important;
+            text-decoration: none !important;
+        }
+
+        .supervisor-link:active {
+            color: #002756 !important;
+            background-color: rgba(0, 86, 179, 0.1) !important;
+            text-decoration: none !important;
+        }
+
+        /* 导师链接样式 - 暗黑模式 - 强化版本 */
+        [data-theme="dark"] .supervisor-link {
+            color: #4dabf7 !important;
+            border-bottom: 1px dotted #4dabf7 !important;
+        }
+
+        [data-theme="dark"] .supervisor-link:hover {
+            color: #74c0fc !important;
+            border-bottom: 1px solid #74c0fc !important;
+            background-color: rgba(77, 171, 247, 0.1) !important;
+        }
+
+        [data-theme="dark"] .supervisor-link:focus {
+            outline: 2px solid #4dabf7 !important;
+            outline-offset: 2px !important;
+        }
+
+        [data-theme="dark"] .supervisor-link:active {
+            color: #a5d8ff !important;
+            background-color: rgba(77, 171, 247, 0.2) !important;
+        }
+
+        /* 确保包含导师链接的段落不会阻止点击 */
+        p:has(.supervisor-link) {
+            pointer-events: auto !important;
+        }
+
+        /* 防止任何遮罩层覆盖导师链接 */
+        .supervisor-link::before,
+        .supervisor-link::after {
+            content: none !important;
+            pointer-events: none !important;
+        }
+    </style>
+
+    <!-- 终极防抖动样式 - 必须放在所有CSS之后 -->
+    <style>
+        /* 彻底消除Publications按钮的抖动和动画 */
+        .publication-links a.btn.btn-sm.btn-outline-primary,
+        .publication-links a.btn.btn-sm.btn-outline-primary:hover,
+        .publication-links a.btn.btn-sm.btn-outline-primary:focus,
+        .publication-links a.btn.btn-sm.btn-outline-primary:active {
+            /* 固定尺寸 */
+            padding: 0.375rem 0.75rem !important;
+            font-size: 0.85rem !important;
+            line-height: 1.5 !important;
+            height: auto !important;
+            min-height: 31px !important;
+            min-width: 70px !important;
+            width: auto !important;
+
+            /* 固定边框 */
+            border: 2px solid var(--primary-color) !important;
+            border-width: 2px !important;
+            border-style: solid !important;
+            border-color: var(--primary-color) !important;
+            border-radius: 25px !important;
+
+            /* 固定颜色 - 所有状态完全相同 */
+            background-color: transparent !important;
+            color: var(--primary-color) !important;
+            opacity: 1 !important;
+
+            /* 固定阴影 */
+            box-shadow: none !important;
+
+            /* 固定布局 */
+            display: inline-block !important;
+            vertical-align: middle !important;
+            text-align: center !important;
+
+            /* 完全禁用所有动画、过渡、变换 */
+            transition: none !important;
+            animation: none !important;
+            transform: none !important;
+            -webkit-transform: none !important;
+
+            /* 防止outline */
+            outline: none !important;
+            outline-offset: 0 !important;
+
+            /* 防止文本装饰 */
+            text-decoration: none !important;
+
+            /* 防止字体渲染变化 */
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+
+            /* 防止任何视觉效果 */
+            filter: none !important;
+            backdrop-filter: none !important;
+        }
+
+        /* 确保图标不移动、不变化 */
+        .publication-links a.btn i,
+        .publication-links a.btn:hover i,
+        .publication-links a.btn:focus i,
+        .publication-links a.btn:active i {
+            display: inline-block !important;
+            vertical-align: middle !important;
+            margin-right: 0.25rem !important;
+            transform: none !important;
+            -webkit-transform: none !important;
+            transition: none !important;
+            animation: none !important;
+            opacity: 1 !important;
+        }
+
+        /* 强制覆盖Bootstrap的所有可能样式 */
+        .publication-links .btn-outline-primary:not(:disabled):not(.disabled):active,
+        .publication-links .btn-outline-primary:not(:disabled):not(.disabled).active,
+        .publication-links .show>.btn-outline-primary.dropdown-toggle {
+            background-color: transparent !important;
+            color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+
+        /* 全局禁用所有按钮的过渡效果 */
+        .btn,
+        .btn-sm,
+        .btn-outline-primary,
+        .btn:hover,
+        .btn:focus,
+        .btn:active,
+        .btn-sm:hover,
+        .btn-sm:focus,
+        .btn-sm:active,
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus,
+        .btn-outline-primary:active {
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -o-transition: none !important;
+            transition: none !important;
+            -webkit-animation: none !important;
+            -moz-animation: none !important;
+            -o-animation: none !important;
+            animation: none !important;
+            -webkit-transform: none !important;
+            -moz-transform: none !important;
+            -o-transform: none !important;
+            -ms-transform: none !important;
+            transform: none !important;
+        }
+    </style>
+
+    <!-- 禁用动画的JavaScript -->
+    <script>
+        // 在页面加载前禁用所有CSS动画和过渡
+        document.addEventListener('DOMContentLoaded', function () {
+            // 为所有publication按钮添加事件监听器，阻止任何视觉变化，但排除导师链接
+            const pubButtons = document.querySelectorAll('.publication-links a.btn:not(.supervisor-link):not([href*="jszy.hhu.edu.cn"])');
+            pubButtons.forEach(function (btn) {
+                // 确保不是导师链接或任何外部链接
+                if (btn.classList.contains('supervisor-link') ||
+                    btn.getAttribute('href') && btn.getAttribute('href').includes('jszy.hhu.edu.cn') ||
+                    btn.getAttribute('target') === '_blank') {
+                    console.log('🚫 Skipping anti-jitter for external/supervisor link:', btn.href);
+                    return;
+                }
+
+                // 阻止默认的hover效果
+                btn.style.transition = 'none';
+                btn.style.animation = 'none';
+                btn.style.transform = 'none';
+
+                // 添加事件监听器来防止任何状态变化
+                ['mouseenter', 'mouseleave', 'mousedown', 'mouseup', 'focus', 'blur'].forEach(function (eventType) {
+                    btn.addEventListener(eventType, function (e) {
+                        this.style.transition = 'none';
+                        this.style.animation = 'none';
+                        this.style.transform = 'none';
+                        this.style.opacity = '1';
+                    }, true);
+                });
+            });
+
+            // Debug: 检查页面上的所有导航按钮
+            console.log('🔍 Checking navigation buttons in Hero section:');
+            const heroButtons = document.querySelectorAll('.hero-content a[href^="#"]');
+            heroButtons.forEach((btn, index) => {
+                console.log(`  Button ${index + 1}:`, btn.getAttribute('href'), '-', btn.textContent.trim());
+            });
+
+            // 移除了重复的备用平滑滚动代码，由 main.js 统一处理
+            // 只确保外部链接（特别是导师链接）可以正常工作
+            setTimeout(function () {
+                const externalLinks = document.querySelectorAll('a[href^="http"], a[href*="jszy.hhu.edu.cn"], a[target="_blank"]');
+                console.log('🔗 Found', externalLinks.length, 'external links');
+                externalLinks.forEach(function (link) {
+                    // 确保外部链接可点击
+                    link.style.pointerEvents = 'auto';
+                    link.style.cursor = 'pointer';
+
+                    // 确保导师链接特殊处理
+                    if (link.classList.contains('supervisor-link')) {
+                        console.log('👨‍🏫 Teacher link confirmed:', link.href, '-', link.textContent.trim());
+                    }
+                });
+            }, 500);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-graduation-cap me-2"></i>
+                <span>Zhenyang Xie's Homepage</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm ms-2" id="languageToggle">
+                            <i class="fas fa-language"></i>
+                            <span class="lang-text ms-1">中文</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm ms-2" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with About Me -->
+    <section id="home" class="hero-section" style="padding-top: 100px; padding-bottom: 3rem;">
+        <div class="container">
+            <!-- Main Introduction -->
+            <div class="row align-items-center mb-5">
+                <!-- Left Column: Personal Photo -->
+                <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
+                    <div class="personal-photo-container text-center">
+                        <div class="profile-photo-wrapper">
+                            <img src="images/profile-photo.jpg" alt="Personal Photo" class="profile-photo img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="profile-info mt-4">
+                            <h3 class="profile-name" style="font-size: 1.4rem;">Zhenyang Xie</h3>
+                            <p class="profile-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Graduate Student</p>
+                            <div class="profile-university" style="font-size: 0.95rem;">
+                                <i class="fas fa-university me-2"></i>
+                                Jiangxi University of Water Resources and Electric Power
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Hero Content -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="hero-content">
+                        <h1 class="fw-bold mb-3" style="font-size: 2rem;">Welcome to Zhenyang Xie's Academic Homepage
+                        </h1>
+                        <h2 class="text-primary mb-3" style="font-size: 1.15rem;">Graduate Student | School of Information Engineering</h2>
+                        <h3 class="text-muted mb-4" style="font-size: 1.05rem;">Hohai University</h3>
+
+                        <p class="mb-4" style="font-size: 1rem; line-height: 1.7;">
+                            I am a graduate student at the
+                            <a href="https://ise.hhu.edu.cn/" target="_blank" rel="noopener noreferrer" class="supervisor-link">
+                                School of Information Engineering</a>,
+                            <a href="https://www.hhu.edu.cn/" target="_blank" rel="noopener noreferrer" class="supervisor-link">Jiangxi University of Water Resources and Electric Power</a>
+                            , supervised by <a href="https://jszy.hhu.edu.cn/ghm/" target="_blank" rel="noopener noreferrer"
+                                class="supervisor-link">Prof. Hongmin Gao (高红民)</a>
+                            and
+                            <a href="https://jszy.hhu.edu.cn/lcm/" target="_blank" rel="noopener noreferrer"
+                                class="supervisor-link">Prof. Chenming Li (李臣明)</a>.
+                            My research focuses on developing advanced artificial intelligence methods for remote
+                            sensing image interpretation,
+                            integrating deep learning techniques with remote sensing data analysis to develop
+                            intelligent systems for automated image interpretation.
+                        </p>
+
+                        <div class="d-flex gap-3 flex-wrap mb-4">
+                            <a href="#publications" class="btn btn-outline-primary btn-sm hero-nav-btn">
+                                <i class="fas fa-file-alt me-2"></i>Publications
+                            </a>
+                            <a href="#services" class="btn btn-outline-primary btn-sm hero-nav-btn">
+                                <i class="fas fa-user-check me-2"></i>Services
+                            </a>
+                            <a href="#gallery" class="btn btn-outline-primary btn-sm hero-nav-btn">
+                                <i class="fas fa-images me-2"></i>Gallery
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-sm hero-nav-btn">
+                                <i class="fas fa-envelope me-2"></i>Contact
+                            </a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/RogsXie" class="social-link me-3"
+                                target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fab fa-github fa-lg"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Mw22Z5q6VHAC"
+                                class="social-link me-3" target="_blank" rel="noopener noreferrer"
+                                title="Google Scholar">
+                                <i class="fas fa-graduation-cap fa-lg"></i>
+                            </a>
+<!--                            <a href="https://www.researchgate.net/profile/Yiyan-Zhang-14/research" class="social-link"-->
+<!--                                target="_blank" rel="noopener noreferrer" title="ResearchGate">-->
+<!--                                <i class="fab fa-researchgate fa-lg"></i>-->
+<!--                            </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Me Content - Integrated and Compact -->
+            <div class="row mt-4" id="about">
+                <div class="col-12">
+                    <hr class="my-4" style="opacity: 0.15;">
+                    <h2 class="text-center mb-4" style="font-size: 1.6rem; font-weight: 600;">About Me</h2>
+
+                    <div class="row g-4">
+                        <!-- Research Focus -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about-card h-100 p-3 rounded"
+                                style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border: 1px solid rgba(0, 123, 255, 0.15); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+                                <h4 class="about-card-title mb-3" style="font-size: 1.05rem; font-weight: 600;">
+                                    <i class="fas fa-microscope me-2"></i>Research Focus
+                                </h4>
+                                <p class="about-card-text"
+                                    style="font-size: 0.95rem; margin-bottom: 0; line-height: 1.6;">
+                                    My work focuses on improving the accuracy and efficiency of remote sensing
+                                    applications through advanced
+                                    machine learning algorithms and computer vision techniques.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Research Interests -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about-card h-100 p-3 rounded"
+                                style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border: 1px solid rgba(0, 123, 255, 0.15); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+                                <h4 class="about-card-title mb-3" style="font-size: 1.05rem; font-weight: 600;">
+                                    <i class="fas fa-star me-2"></i>Research Interests
+                                </h4>
+                                <ul class="about-card-text"
+                                    style="font-size: 0.95rem; margin-bottom: 0; padding-left: 1.2rem; line-height: 1.6;">
+                                    <li>Artificial Intelligence & Deep Learning</li>
+                                    <li>Remote Sensing Image Processing</li>
+                                    <li>Computer Vision & Pattern Recognition</li>
+                                    <li>Geographic Information Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Technical Expertise -->
+                        <div class="col-lg-4 col-md-12">
+                            <div class="about-card h-100 p-3 rounded"
+                                style="background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border: 1px solid rgba(0, 123, 255, 0.15); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+                                <h4 class="about-card-title mb-3" style="font-size: 1.05rem; font-weight: 600;">
+                                    <i class="fas fa-tools me-2"></i>Technical Expertise
+                                </h4>
+                                <p class="about-card-text"
+                                    style="font-size: 0.95rem; margin-bottom: 0; line-height: 1.6;">
+                                    Deep Learning, CNNs, Transformer architectures, Selective State Space Model,
+                                    Classification, Change Detection, Multi-scale Feature Fusion
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="bg-light" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-4" style="font-size: 1.75rem;">Publications</h2>
+                </div>
+            </div>
+
+
+            <!-- Publications List -->
+            <div class="row" id="publicationsList">
+                <!-- Publication items will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-4" style="font-size: 1.75rem;">Academic Services</h2>
+                    <p class="text-center mb-5"
+                        style="font-size: 1.05rem; color: var(--text-light); max-width: 800px; margin-left: auto; margin-right: auto;">
+                        I serve as a reviewer for several prestigious journals in the fields of image processing, remote
+                        sensing, and artificial intelligence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Journal Reviewer Section -->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-10 mx-auto">-->
+<!--                    <div class="service-card p-4 mb-4"-->
+<!--                        style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); border-left: 4px solid #0056b3;">-->
+<!--                        <h3 class="mb-4" style="font-size: 1.3rem; color: #0056b3; font-weight: 600;">-->
+<!--                            <i class="fas fa-book-reader me-2"></i>Journal Reviewer-->
+<!--                        </h3>-->
+
+<!--                        <div class="row g-3">-->
+<!--                            &lt;!&ndash; IEEE Journals &ndash;&gt;-->
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Image-->
+<!--                                        Processing</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Geoscience and-->
+<!--                                        Remote Sensing</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Neural Networks-->
+<!--                                        and Learning Systems</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on-->
+<!--                                        Cybernetics</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Circuits and-->
+<!--                                        Systems for Video Technology</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Big Data</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Transactions on Emerging Topics-->
+<!--                                        in Computational Intelligence</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">IEEE Geoscience and Remote Sensing-->
+<!--                                        Letters</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Other Journals &ndash;&gt;-->
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Information Fusion</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">ISPRS Journal of Photogrammetry and-->
+<!--                                        Remote Sensing</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Knowledge-Based Systems</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Expert Systems With-->
+<!--                                        Applications</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Engineering Applications of-->
+<!--                                        Artificial Intelligence</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Neural Networks</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">Computers and Electronics in-->
+<!--                                        Agriculture</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="journal-item"-->
+<!--                                    style="background: linear-gradient(135deg, rgba(0, 86, 179, 0.03) 0%, rgba(102, 126, 234, 0.05) 100%); border-radius: 10px; border: 1px solid rgba(0, 86, 179, 0.1);">-->
+<!--                                    <i class="fas fa-certificate" style="color: #0056b3;"></i>-->
+<!--                                    <span style="font-weight: 500; color: #2d3748;">International Journal of-->
+<!--                                        Computational Intelligence and Applications</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-light" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-4" style="font-size: 1.75rem;">Research Gallery</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Gallery items will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-4" style="font-size: 1.75rem;">Contact</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-content text-center">
+                        <div class="contact-info">
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
+                                <h4 style="font-size: 1.1rem;">Email</h4>
+                                <p style="font-size: 0.95rem;">xiewak@163.com.cn</p>
+                            </div>
+
+                            <div class="contact-social">
+                                <h4 class="mb-3" style="font-size: 1.1rem;">Find Me On</h4>
+                                <div class="social-links-large">
+                                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=Mw22Z5q6VHAC"
+                                        class="social-link-large me-4" target="_blank" rel="noopener noreferrer"
+                                        title="Google Scholar">
+                                        <i class="fas fa-graduation-cap fa-2x"></i>
+                                        <span class="d-block mt-2" style="font-size: 0.9rem;">Google Scholar</span>
+                                    </a>
+<!--                                    <a href="https://www.researchgate.net/profile/Yiyan-Zhang-14?ev=hdr_xprf"-->
+<!--                                        class="social-link-large me-4" target="_blank" rel="noopener noreferrer"-->
+<!--                                        title="ResearchGate">-->
+<!--                                        <i class="fab fa-researchgate fa-2x"></i>-->
+<!--                                        <span class="d-block mt-2" style="font-size: 0.9rem;">ResearchGate</span>-->
+<!--                                    </a>-->
+                                    <a href="javascript:void(0);" class="social-link-large"
+                                        onclick="showWeChatQR(); return false;" title="WeChat">
+                                        <i class="fab fa-weixin fa-2x"></i>
+                                        <span class="d-block mt-2" style="font-size: 0.9rem;">WeChat</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="mb-0">Welcome to Zhenyang Xie's Homepage</p>
+                    <p class="mb-0 mt-2">
+                        <small></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/papers.js"></script>
+
+    <!-- Simplified Icon Fallback Script -->
+    <script>
+        // Simple Font Awesome detection and fallback system
+        const unicodeIcons = {
+            'fa-github': { symbol: '⚡', text: 'GitHub' },
+            'fa-graduation-cap': { symbol: '🎓', text: 'Scholar' },
+            // 'fa-researchgate': { symbol: '🔬', text: 'Research' },
+            'fa-weixin': { symbol: '💬', text: 'WeChat' },
+            'fa-envelope': { symbol: '✉️', text: 'Email' }
+        };
+
+        function initializeIconFallbacks() {
+            // Check if Font Awesome is loaded
+            const testElement = document.createElement('i');
+            testElement.className = 'fas fa-home';
+            testElement.style.position = 'absolute';
+            testElement.style.visibility = 'hidden';
+            document.body.appendChild(testElement);
+
+            const computedStyle = window.getComputedStyle(testElement);
+            const isLoaded = computedStyle.fontFamily.includes('Font Awesome') ||
+                computedStyle.fontFamily.includes('FontAwesome');
+
+            document.body.removeChild(testElement);
+
+            if (!isLoaded) {
+                console.warn('Font Awesome not loaded, using Unicode fallbacks');
+                addUnicodeFallbacks();
+            }
+        }
+
+        function addUnicodeFallbacks() {
+            document.querySelectorAll('.fab, .fas, .far').forEach(icon => {
+                const iconClass = Array.from(icon.classList).find(cls => cls.startsWith('fa-') && !cls.includes('fa-lg') && !cls.includes('fa-2x'));
+                if (iconClass && unicodeIcons[iconClass]) {
+                    const fallback = unicodeIcons[iconClass];
+                    const parent = icon.parentElement;
+
+                    // Create Unicode span
+                    const unicodeSpan = document.createElement('span');
+                    unicodeSpan.innerHTML = `<span style="font-size: ${icon.classList.contains('fa-2x') ? '2em' : '1.2em'}; margin-right: 0.5em;">${fallback.symbol}</span><span style="font-size: 0.8em;">${fallback.text}</span>`;
+                    unicodeSpan.className = 'unicode-fallback';
+
+                    // Hide original icon and add fallback
+                    icon.style.display = 'none';
+                    parent.insertBefore(unicodeSpan, icon);
+                }
+            });
+        }
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(initializeIconFallbacks, 500);
+        });
+
+    </script>
+</body>
+
+</html>

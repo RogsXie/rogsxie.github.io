@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/sitemap.xml
+
+# Allow search engines to crawl all content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+
+# Disallow temporary or system files
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /temp/
+Disallow: /.git/
+
+# Crawl-delay (optional, be considerate to server resources)
+# Crawl-delay: 1

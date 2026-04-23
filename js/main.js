@@ -561,13 +561,7 @@ function initGallery() {
     }
 
       const galleryImages = [
-        // 'five.jpg',
-        // 'six.jpg',
-        // 'seven.jpg',
-        // 'eight.jpg',
-        // 'nine.jpg',
-        // 'ten.jpg'
-        // Add more image filenames here as you upload them
+        'one.jpg',
     ];
 
     // Generate gallery HTML

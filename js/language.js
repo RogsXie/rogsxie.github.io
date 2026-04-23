@@ -358,7 +358,7 @@ function updateHeroSection(t) {
                 `;
             } else {
                 introPara.innerHTML = `
-                    I am a PhD student at the ${collegeClone.outerHTML}, ${hhuClone.outerHTML}, supervised by 
+                    I am a graduate student at the ${collegeClone.outerHTML}, ${hhuClone.outerHTML}, supervised by 
                     ${prof1Clone.outerHTML} 
                     and 
                     ${prof2Clone.outerHTML}.

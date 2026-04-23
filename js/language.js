@@ -18,7 +18,7 @@ const translations = {
             university: "Jiangxi University of Water Resources and Electric Power",
             intro1: "I am a master's degree student. at the",
             intro2: ", supervised by",
-            intro3: "and",
+            // intro3: "and",
             intro4: "My research focuses on developing advanced artificial intelligence methods for remote sensing image interpretation, integrating deep learning techniques with remote sensing data analysis to develop intelligent systems for automated image interpretation.",
             collegeOf: "School of Information Engineering"
         },
@@ -116,7 +116,9 @@ const translations = {
             university: "江西水利电力大学",
             intro1: "我是",
             intro2: "的硕士研究生，导师为",
-            intro3: "教授和",
+            // intro3: "教授和",
+            // intro4: "教授。我的研究专注于开发先进的人工智能方法用于遥感图像解译，将深度学习技术与遥感数据分析相结合，设计智能化的遥感图像解译算法。",
+            // intro3: "教授和",
             intro4: "教授。我的研究专注于开发先进的人工智能方法用于遥感图像解译，将深度学习技术与遥感数据分析相结合，设计智能化的遥感图像解译算法。",
             collegeOf: "信息工程学院"
         },

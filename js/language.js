@@ -42,7 +42,10 @@ const translations = {
                 gis: "Geographic Information Systems"
             },
             technicalExpertise: "Technical Expertise",
-            technicalText: "Deep Learning, CNNs, Transformer architectures, Selective State Space Model, Classification, Change Detection, Multi-scale Feature Fusion"
+            technicalText: "Deep Learning, CNNs, Transformer architectures, Selective State Space Model, Classification, Change Detection, Multi-scale Feature Fusion",
+            education: "Education",
+            edu1: "M.S. in Big Data Technology and Engineering, Jiangxi University of Water Resources and Electric Power (2024.09 - 2027.06)",
+            edu2: "B.E. in Software Engineering, Jiangxi Normal University (2020.09 - 2024.06)"
         },
         // Publications Section
         publications: {
@@ -142,7 +145,10 @@ const translations = {
                 gis: "地理信息系统"
             },
             technicalExpertise: "技术特长",
-            technicalText: "深度学习、卷积神经网络、Transformer架构、选择性状态空间模型、分类、变化检测、多尺度特征融合"
+            technicalText: "深度学习、卷积神经网络、Transformer架构、选择性状态空间模型、分类、变化检测、多尺度特征融合",
+            education: "教育背景",
+            edu1: "江西水利电力大学 · 大数据技术与工程 · 硕士 (2024.09 - 2027.06)",
+            edu2: "江西师范大学 · 软件工程 · 学士 (2020.09 - 2024.06)"
         },
         // Publications Section
         publications: {

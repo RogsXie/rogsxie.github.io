@@ -470,8 +470,19 @@ function updateAboutSection(t) {
         }
         
         if (eduParas.length >= 2) {
-            eduParas[0].textContent = t.about.edu1;
-            eduParas[1].textContent = t.about.edu2;
+                // 第一段：硕士
+                eduParas[0].innerHTML = `
+                    <div class="d-flex justify-content-between align-items-start flex-wrap">
+                        <span class="edu-text">${t.about.edu1}</span>
+                        <span class="badge bg-primary-soft text-primary mt-1">${t.about.edu1Awards}</span>
+                    </div>`;
+                
+                // 第二段：学士
+                eduParas[1].innerHTML = `
+                    <div class="d-flex justify-content-between align-items-start flex-wrap">
+                        <span class="edu-text">${t.about.edu2}</span>
+                        <span class="badge bg-primary-soft text-primary mt-1">${t.about.edu2Awards}</span>
+                    </div>`;
         }
     }
 }

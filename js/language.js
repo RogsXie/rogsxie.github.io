@@ -462,27 +462,26 @@ function updateAboutSection(t) {
         }
         const fourthCard = aboutCards[3];
         const fourthTitle = fourthCard.querySelector('h4');
-        const eduParas = fourthCard.querySelectorAll('p');
+        // const eduParas = fourthCard.querySelectorAll('p');
+        const eduItems = fourthCard.querySelectorAll('.edu-item');
         
         if (fourthTitle) {
             const icon = fourthTitle.querySelector('i');
             fourthTitle.innerHTML = `${icon ? icon.outerHTML : ''} ${t.about.education}`;
         }
         
-        if (eduParas.length >= 2) {
-                // 硕士经历
-                eduParas[0].innerHTML = `
-                    <div class="edu-item-inner d-flex justify-content-between align-items-center w-100">
-                        <span class="edu-info"><strong>${t.about.edu1}</strong></span>
-                        <span class="badge bg-primary-soft text-primary award-badge">${t.about.edu1Awards}</span>
-                    </div>`;
-                
-                // 本科经历
-                eduParas[1].innerHTML = `
-                    <div class="edu-item-inner d-flex justify-content-between align-items-center w-100">
-                        <span class="edu-info"><strong>${t.about.edu2}</strong></span>
-                        <span class="badge bg-primary-soft text-primary award-badge">${t.about.edu2Awards}</span>
-                    </div>`;
+        if (eduItems.length >= 2) {
+            // 硕士经历：学校信息加粗 + 奖项徽章
+            eduItems[0].innerHTML = `
+                <span class="edu-info"><strong>${t.about.edu1}</strong></span>
+                <span class="badge bg-primary-soft text-primary award-badge">${t.about.edu1Awards}</span>
+            `;
+            
+            // 本科经历：学校信息加粗 + 奖项徽章
+            eduItems[1].innerHTML = `
+                <span class="edu-info"><strong>${t.about.edu2}</strong></span>
+                <span class="badge bg-primary-soft text-primary award-badge">${t.about.edu2Awards}</span>
+            `;
         }
     }
 }

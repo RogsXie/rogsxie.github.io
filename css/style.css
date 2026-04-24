@@ -55,6 +55,47 @@
     --hero-button-hover: #3b82f6;
 }
 
+/* 优化 About Me 区域的整体字体 */
+#about .about-card-text {
+    font-size: 1.05rem !important; /* 从 0.95 提升到 1.05，视觉上大很多 */
+    line-height: 1.8 !important;   /* 增加行间距，防止文字挤在一起 */
+}
+
+/* 专门针对教育背景卡片的样式优化 */
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed rgba(0, 86, 179, 0.1); /* 增加虚线分隔 */
+    padding-bottom: 10px;
+    margin-bottom: 10px !important;
+}
+
+.edu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0 !important;
+}
+
+/* 奖项徽章的字体也要稍微调大，并增加间距 */
+.award-badge {
+    font-size: 0.85rem !important;
+    padding: 4px 10px !important;
+    margin-left: 15px;
+    white-space: nowrap; /* 防止奖项在中间断开 */
+}
+
+/* 手机端适配：如果屏幕太窄，奖项自动换行 */
+@media (max-width: 768px) {
+    .edu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .award-badge {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
+
 /* ===== 全局样式 ===== */
 * {
     margin: 0;

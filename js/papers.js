@@ -19,13 +19,13 @@ const papersData = [
         // Model image fields
         hasModelImage: true,
         modelImage: "images/models/DAHGMN.png",
-        modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Networ Architecture",
+        modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
         citations: 6,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },
-        {
+    {
         id: 2,
         title: "Contrastive Prototype Clustering for Multimodal  Remote Sensing Data Based on Spectral–Spatial  Cross Mamba",
         authors: "Li Lv, Zhenyang Xie, Hongmin Gao, Shufang Xu, Zhenzhen Li, Haihua Xie, Dongxiao Liu",
@@ -42,7 +42,30 @@ const papersData = [
         // Model image fields
         hasModelImage: true,
         modelImage: "images/models/CPCM.png",
-        modelImageAlt: "Contrastive Prototype Clustering Networ Architecture",
+        modelImageAlt: "Contrastive Prototype Clustering Network Architecture",
+        // Citation data
+        citations: 0,  // 手动更新的引用次数
+        googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
+
+    },
+        {
+        id: 3,
+        title: "GLDMamba: Global–Local Differential Mamba Network for Hyperspectral Image Change Detection",
+        authors: "Zhenyang Xie, Li Lv, Hongmin Gao, Shufang Xu, Jeng-shyang Pan, Wenping Chen, Longzhe Han",
+        venue: "",
+        venueUrl: "",
+        journalInfo: "(SCI, Q1, IF:8.6)",
+        esiHighlyCited: false,
+        year: 2026,
+        type: "journal",
+        doi: null,
+        pdf: "",
+        code: "https://github.com/RogsXie/GLDMamba",
+        keywords: ["Hyperspectral image, change detection, image-level processing, global-local difference fusion, Mamba"],
+        // Model image fields
+        hasModelImage: true,
+        modelImage: "images/models/GLDMamba.png",
+        modelImageAlt: "Global–Local Differential Mamba Network Architecture",
         // Citation data
         citations: 0,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）

@@ -21,7 +21,7 @@ const papersData = [
         modelImage: "images/models/DAHGMN.png",
         modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
-        citations: 7,  // 手动更新的引用次数
+        citations: 8,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },
@@ -44,7 +44,7 @@ const papersData = [
         modelImage: "images/models/CPCM.png",
         modelImageAlt: "Contrastive Prototype Clustering Network Architecture",
         // Citation data
-        citations: 0,  // 手动更新的引用次数
+        citations: 1,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
 
     },
@@ -52,14 +52,14 @@ const papersData = [
         id: 3,
         title: "GLDMamba: Global–Local Differential Mamba Network for Hyperspectral Image Change Detection",
         authors: "Zhenyang Xie, Li Lv, Hongmin Gao, Shufang Xu, Jeng-shyang Pan, Wenping Chen, Longzhe Han",
-        venue: "",
-        venueUrl: "",
+        venue: "IEEE Transactions on Geoscience and Remote Sensing",
+        venueUrl: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36",
         journalInfo: "(SCI, Q1, IF:8.6)",
         esiHighlyCited: false,
         year: 2026,
         type: "journal",
         doi: null,
-        pdf: "",
+        pdf: "https://ieeexplore.ieee.org/document/11556393",
         code: "https://github.com/RogsXie/GLDMamba",
         keywords: ["Hyperspectral image, change detection, image-level processing, global-local difference fusion, Mamba"],
         // Model image fields

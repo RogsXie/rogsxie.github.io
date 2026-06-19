@@ -11,22 +11,13 @@
     transition: all 0.3s ease;
 }
 
-/*.profile-photo {*/
-/*    width: 280px;*/
-/*    height: 280px;*/
-/*    border-radius: 50%;*/
-/*    object-fit: cover;*/
-/*    border: 5px solid rgba(0, 86, 179, 0.15);*/
-/*    box-shadow: 0 10px 30px rgba(0, 86, 179, 0.2), 0 0 0 15px rgba(0, 86, 179, 0.05);*/
-/*    background: #ffffff;*/
-/*}*/
 .profile-photo {
     width: 280px;
-    height: 280px;
-    border-radius: 12px; /* 适度的圆角看起来最专业 */
-    object-fit: cover;
-    border: 1px solid rgba(0, 86, 179, 0.1); /* 减薄边框 */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* 更柔和的阴影 */
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    border: 1px solid rgba(0, 86, 179, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     background: #ffffff;
 }
 

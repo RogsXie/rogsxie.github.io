@@ -21,8 +21,8 @@
 /*    background: #ffffff;*/
 /*}*/
 .profile-photo {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
     border-radius: 12px; /* 适度的圆角看起来最专业 */
     object-fit: cover;
     border: 1px solid rgba(0, 86, 179, 0.1); /* 减薄边框 */
@@ -113,8 +113,8 @@
 /* Responsive Design */
 @media (max-width: 991px) {
     .profile-photo {
-        width: 240px;
-        height: 240px;
+        width: 280px;
+        height: 280px;
     }
 
     .profile-name {
@@ -141,8 +141,8 @@
     }
 
     .profile-photo {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
     }
 
     .profile-name {
@@ -172,8 +172,8 @@
 
 @media (max-width: 576px) {
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
     }
 
     .profile-name {

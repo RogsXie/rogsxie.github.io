@@ -21,7 +21,7 @@ const papersData = [
         modelImage: "images/models/DAHGMN.png",
         modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
-        citations: 8,  // 手动更新的引用次数
+        citations: 10,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },

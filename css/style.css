@@ -2514,9 +2514,9 @@ input:focus {
 }
 
 .empty-section-card {
-    max-width: 520px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.75rem 2rem;
 }
 
 .internship-card {

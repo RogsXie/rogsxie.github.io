@@ -8,7 +8,7 @@ const papersData = [
         authors: "Zhenyang Xie, Li Lv, Hongmin Gao, Shufang Xu, Haihua Xie",
         venue: "IEEE Transactions on Geoscience and Remote Sensing",
         venueUrl: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36",
-        journalInfo: "(SCI, Q1, IF:8.6)",
+        journalInfo: "(SCI, Q1, IF:9.4)",
         esiHighlyCited: false,
         year: 2025,
         type: "journal",
@@ -21,7 +21,7 @@ const papersData = [
         modelImage: "images/models/DAHGMN.png",
         modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
-        citations: 10,  // 手动更新的引用次数
+        citations: 11,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },
@@ -31,7 +31,7 @@ const papersData = [
         authors: "Li Lv, Zhenyang Xie, Hongmin Gao, Shufang Xu, Zhenzhen Li, Haihua Xie, Dongxiao Liu",
         venue: "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
         venueUrl: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443",
-        journalInfo: "(SCI, Q1, IF:5.3)",
+        journalInfo: "(SCI, Q1, IF:6.3)",
         esiHighlyCited: false,
         year: 2026,
         type: "journal",
@@ -54,7 +54,7 @@ const papersData = [
         authors: "Zhenyang Xie, Li Lv, Hongmin Gao, Shufang Xu, Jeng-shyang Pan, Wenping Chen, Longzhe Han",
         venue: "IEEE Transactions on Geoscience and Remote Sensing",
         venueUrl: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36",
-        journalInfo: "(SCI, Q1, IF:8.6)",
+        journalInfo: "(SCI, Q1, IF:9.4)",
         esiHighlyCited: false,
         year: 2026,
         type: "journal",

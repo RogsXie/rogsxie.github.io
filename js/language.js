@@ -75,7 +75,7 @@ const translations = {
             time: "Feb. 2024 - Jun. 2024",
             role: "Intern, Data Governance",
             company2: "State Grid Jiangxi Electric Power Co., Ltd. Information & Communication Branch - Production Technology Department",
-            time2: "Jul. 2026 - Oct. 2024",
+            time2: "Jul. 2026 - Oct. 2026",
             role2: "Intern, Intellectual Property"
         },
         honors: {
@@ -180,7 +180,7 @@ const translations = {
             time: "2024 年 02 月 - 2024 年 06 月",
             role: "实习生（数据治理）",
             company2: "国网江西省电力有限公司信息通信分公司-生产技术部门",
-            time2: "2026 年 07 月 - 2024 年 10 月",
+            time2: "2026 年 07 月 - 2026 年 10 月",
             role2: "实习生（知识产权）"
         },
         honors: {

@@ -73,7 +73,10 @@ const translations = {
             title: "Internship Experience",
             company: "CATL 21C Innovation Laboratory",
             time: "Feb. 2024 - Jun. 2024",
-            role: "Intern, Data Governance"
+            role: "Intern, Data Governance",
+            company2: "State Grid Jiangxi Electric Power Co., Ltd. Information & Communication Branch - Production Technology Department",
+            time2: "Jul. 2026 - Oct. 2024",
+            role2: "Intern, Intellectual Property"
         },
         honors: {
             title: "Honors & Awards",
@@ -81,8 +84,8 @@ const translations = {
         },
         services: {
             title: "Academic Services",
-            subtitle: "I serve as a reviewer for several prestigious journals in the fields of image processing, remote sensing, and artificial intelligence.",
-            journalReviewer: "Journal Reviewer"
+            subtitle: "I serve as a reviewer for the following academic journals and conferences.",
+            journalReviewer: "Journal & Conference Reviewer"
         },
         gallery: {
             title: "Research Gallery",
@@ -175,7 +178,10 @@ const translations = {
             title: "实习经历",
             company: "宁德时代新能源科技股份有限公司 21C 创新实验中心",
             time: "2024 年 02 月 - 2024 年 06 月",
-            role: "实习生（数据治理）"
+            role: "实习生（数据治理）",
+            company2: "国网江西省电力有限公司信息通信分公司-生产技术部门",
+            time2: "2026 年 07 月 - 2024 年 10 月",
+            role2: "实习生（知识产权）"
         },
         honors: {
             title: "荣誉和奖项",
@@ -183,8 +189,8 @@ const translations = {
         },
         services: {
             title: "学术服务",
-            subtitle: "我担任图像处理、遥感和人工智能等领域多个学术期刊的审稿人。",
-            journalReviewer: "期刊审稿人"
+            subtitle: "我担任以下学术期刊及会议审稿人。",
+            journalReviewer: "学术期刊及会议审稿人"
         },
         gallery: {
             title: "科研活动图片",
@@ -386,14 +392,23 @@ function updateInternshipSection(t) {
     const title = document.querySelector('#internship h2');
     if (title) title.textContent = t.internship.title;
 
-    const company = document.querySelector('.internship-company');
+    const company = document.querySelector('.internship-company-catl');
     if (company) company.textContent = t.internship.company;
 
-    const time = document.querySelector('.internship-time');
+    const time = document.querySelector('.internship-time-catl');
     if (time) time.textContent = t.internship.time;
 
-    const role = document.querySelector('.internship-role');
+    const role = document.querySelector('.internship-role-catl');
     if (role) role.textContent = t.internship.role;
+
+    const company2 = document.querySelector('.internship-company-state-grid');
+    if (company2) company2.textContent = t.internship.company2;
+
+    const time2 = document.querySelector('.internship-time-state-grid');
+    if (time2) time2.textContent = t.internship.time2;
+
+    const role2 = document.querySelector('.internship-role-state-grid');
+    if (role2) role2.textContent = t.internship.role2;
 }
 
 function updateHonorsSection(t) {

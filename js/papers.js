@@ -70,7 +70,7 @@ const papersData = [
         modelImage: "images/models/GLDMamba.png",
         modelImageAlt: "Global–Local Differential Mamba Network Architecture",
         // Citation data
-        citations: 0,  // 手动更新的引用次数
+        citations: 1,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
 
     },

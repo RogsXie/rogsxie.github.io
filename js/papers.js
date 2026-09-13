@@ -73,7 +73,7 @@ const papersData = [
         citations: 1,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
     },
-        {
+    {
         id: 4,
         title: "Text-augmented patch–scene collaborative network for joint hyperspectral and LiDAR classification",
         authors: "Li Lv, Zhenyang Xie, Hongmin Gao, Shufang Xu, Haihua Xie, Wenping Chen, Shuiping Kang",

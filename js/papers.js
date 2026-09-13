@@ -22,7 +22,7 @@ const papersData = [
         modelImage: "images/models/DAHGMN.png",
         modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
-        citations: 12,  // 手动更新的引用次数
+        citations: 14,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },
@@ -46,11 +46,11 @@ const papersData = [
         modelImage: "images/models/CPCM.png",
         modelImageAlt: "Contrastive Prototype Clustering Network Architecture",
         // Citation data
-        citations: 1,  // 手动更新的引用次数
+        citations: 3,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
 
     },
-        {
+    {
         id: 3,
         title: "GLDMamba: Global–Local Differential Mamba Network for Hyperspectral Image Change Detection",
         authors: "Zhenyang Xie, Li Lv, Hongmin Gao, Shufang Xu, Jeng-shyang Pan, Wenping Chen, Longzhe Han",
@@ -71,6 +71,29 @@ const papersData = [
         modelImageAlt: "Global–Local Differential Mamba Network Architecture",
         // Citation data
         citations: 1,  // 手动更新的引用次数
+        googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
+    },
+        {
+        id: 4,
+        title: "Text-augmented patch–scene collaborative network for joint hyperspectral and LiDAR classification",
+        authors: "Li Lv, Zhenyang Xie, Hongmin Gao, Shufang Xu, Haihua Xie, Wenping Chen, Shuiping Kang",
+        venue: "Information Fusion",
+        venueUrl: "https://www.sciencedirect.com/journal/information-fusion",
+        journalInfo: "(SCI, Q1, IF:17.4)",
+        esiHighlyCited: false,
+        year: 2026,
+        type: "journal",
+        publicationGroup: "firstSecondAuthor",
+        doi: null,
+        pdf: "",
+        code: "https://github.com/RogsXie/TAPSCN",
+        keywords: ["Hyperspectral, LiDAR, State space model, Text augmentation, Patch–scene collaborative learning, Classification"],
+        // Model image fields
+        hasModelImage: true,
+        modelImage: "images/models/TAPSCN.png",
+        modelImageAlt: "Text-Augmented Patch–Scene Collaborative Network Architecture",
+        // Citation data
+        citations: 0,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
 
     },

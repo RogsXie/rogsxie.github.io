@@ -27,22 +27,30 @@
 }
 
 .profile-like {
+    appearance: none;
+    -webkit-appearance: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55rem;
-    min-width: 112px;
+    gap: 0.45rem;
     min-height: 36px;
-    padding: 0.4rem 0.75rem;
-    border: 1px solid rgba(0, 86, 179, 0.25);
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.84);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(0, 86, 179, 0.22);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.88);
     color: #0056b3;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.25;
+    white-space: nowrap;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.profile-like .fa-heart {
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 .profile-like:hover:not(:disabled) {
@@ -58,6 +66,7 @@
 .profile-like[aria-pressed="true"] {
     color: #c4355a;
     border-color: rgba(196, 53, 90, 0.35);
+    background: rgba(196, 53, 90, 0.07);
 }
 
 .profile-like:disabled {
@@ -66,8 +75,10 @@
 }
 
 .profile-like-count {
-    min-width: 1ch;
+    min-width: 2ch;
+    text-align: right;
     font-variant-numeric: tabular-nums;
+    font-weight: 600;
 }
 
 [data-theme="dark"] .profile-like {

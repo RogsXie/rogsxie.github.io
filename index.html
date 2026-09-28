@@ -495,7 +495,14 @@
                             <img src="images/profile-photo.jpg" alt="Personal Photo" class="profile-photo img-fluid"
                                 loading="lazy">
                         </div>
-                        <div class="profile-info mt-4">
+                        <div class="profile-like-wrap">
+                            <button id="profileLike" class="profile-like" type="button" aria-pressed="false">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                <span class="profile-like-label">Like</span>
+                                <span id="likeCount" class="profile-like-count" aria-live="polite">--</span>
+                            </button>
+                        </div>
+                        <div class="profile-info mt-3">
                             <h3 class="profile-name" style="font-size: 1.4rem;">Zhenyang Xie</h3>
                             <p class="profile-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Graduate Student</p>
                             <div class="profile-university" style="font-size: 0.95rem;">
@@ -580,10 +587,10 @@
                                 </h4>
                                 <p class="about-card-text"
                                     style="font-size: 0.95rem; margin-bottom: 0; line-height: 1.6;">
-                                    My current work focuses on identity preservation and long-term association in
-                                    multi-object tracking, especially when targets interact, become occluded, or
-                                    disappear for extended periods. I am also exploring local decision making,
-                                    multimodal memory updates, and future-state reasoning.
+                                    I focus on identity preservation and long-term association in multi-object tracking
+                                    under interactions, occlusion, and prolonged disappearances. I also explore local
+                                    decisions, multimodal memory, and vision-language-action reasoning for persistent
+                                    perception and decision making in open environments.
                                 </p>
                             </div>
                         </div>
@@ -646,9 +653,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="empty-section-card text-center">
-                        <i class="fas fa-bullhorn fa-2x text-primary mb-3"></i>
-                        <p class="mb-0 text-muted empty-section-text">Updates will be added soon.</p>
+                    <div class="news-item">
+                        <time class="news-date" datetime="2026-09">2026.09</time>
+                        <p class="news-text">Our paper TAPSCN was accepted by Information Fusion.</p>
                     </div>
                 </div>
             </div>
@@ -968,9 +975,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <p class="mb-0">Welcome to Zhenyang Xie's Homepage</p>
-                    <p class="mb-0 mt-2">
-                        <small></small>
-                    </p>
+                    <div class="footer-views mt-2" aria-live="polite">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        <span class="footer-views-label">Views</span>
+                        <span id="viewCount" class="footer-views-count">--</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -986,6 +995,7 @@
     <script src="js/language.js"></script>
     <script src="js/main.js"></script>
     <script src="js/papers.js"></script>
+    <script src="js/counters.js"></script>
 
     <!-- Simplified Icon Fallback Script -->
     <script>

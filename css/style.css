@@ -523,6 +523,21 @@ footer a:hover {
     color: white;
 }
 
+.footer-views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+.footer-views-count {
+    min-width: 1ch;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
 /* 暗色模式footer */
 [data-theme="dark"] footer {
     background: var(--bg-dark) !important;
@@ -2517,6 +2532,52 @@ input:focus {
     max-width: 780px;
     margin: 0 auto;
     padding: 1.75rem 2rem;
+}
+
+.news-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(0, 86, 179, 0.12);
+    border-left: 3px solid #0056b3;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.news-date {
+    flex: none;
+    color: #0056b3;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.news-text {
+    min-width: 0;
+    margin: 0;
+    color: #24364b;
+}
+
+[data-theme="dark"] .news-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    border-left-color: #4dabf7;
+}
+
+[data-theme="dark"] .news-date {
+    color: #74c0fc;
+}
+
+[data-theme="dark"] .news-text {
+    color: var(--text-dark);
+}
+
+@media (max-width: 576px) {
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+    }
 }
 
 .internship-card {

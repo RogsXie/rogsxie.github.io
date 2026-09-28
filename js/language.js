@@ -28,7 +28,7 @@ const translations = {
         about: {
             title: "About Me",
             researchFocus: "Research Focus",
-            researchFocusText: "My current work focuses on identity preservation and long-term association in multi-object tracking, especially when targets interact, become occluded, or disappear for extended periods. I am also exploring local decision making, multimodal memory updates, and future-state reasoning, with the goal of connecting visual tracking, scene understanding, agent memory, and vision-language-action reasoning for reliable perception and decision making in open environments.",
+            researchFocusText: "I focus on identity preservation and long-term association in multi-object tracking under interactions, occlusion, and prolonged disappearances. I also explore local decisions, multimodal memory, and vision-language-action reasoning for persistent perception and decision making in open environments.",
             researchInterests: "Research Interests",
             interests: [
                 "Artificial Intelligence & Deep Learning",
@@ -67,7 +67,7 @@ const translations = {
         },
         news: {
             title: "News",
-            empty: "Updates will be added soon."
+            tapscn: "Our paper TAPSCN was accepted by Information Fusion."
         },
         internship: {
             title: "Internship Experience",
@@ -102,7 +102,12 @@ const translations = {
             weChat: "WeChat"
         },
         footer: {
-            welcome: "Welcome to Zhenyang Xie's Homepage"
+            welcome: "Welcome to Zhenyang Xie's Homepage",
+            views: "Views"
+        },
+        engagement: {
+            like: "Like",
+            liked: "Liked"
         },
         backToTop: "Back to Top"
     },
@@ -133,7 +138,7 @@ const translations = {
         about: {
             title: "关于我",
             researchFocus: "研究方向",
-            researchFocusText: "我目前更关注多目标追踪中的身份保持与长期关联问题，特别是在复杂交互、遮挡和目标长时间消失等场景下，如何让模型稳定地理解“谁是谁”。在此基础上，我也在探索局部决策、多模态记忆更新和面向未来状态的推理，希望逐步把视觉跟踪、场景理解、智能体记忆与视觉-语言-动作推理连接起来，为开放环境中的持续感知和决策提供更可靠的方法。",
+            researchFocusText: "我关注多目标追踪中的身份保持与长期关联，尤其是交互、遮挡和目标长期消失时的稳定跟踪；同时探索局部决策、多模态记忆与视觉-语言-动作推理，以支持开放环境中的持续感知与决策。",
             researchInterests: "研究兴趣",
             interests: [
                 "人工智能与深度学习",
@@ -172,7 +177,7 @@ const translations = {
         },
         news: {
             title: "消息动态",
-            empty: "消息动态将陆续更新。"
+            tapscn: "TAPSCN 论文被《Information Fusion》接收。"
         },
         internship: {
             title: "实习经历",
@@ -207,7 +212,12 @@ const translations = {
             weChat: "微信"
         },
         footer: {
-            welcome: "欢迎访问谢镇阳的主页"
+            welcome: "欢迎访问谢镇阳的主页",
+            views: "浏览量"
+        },
+        engagement: {
+            like: "喜欢",
+            liked: "已喜欢"
         },
         backToTop: "返回顶部"
     }
@@ -268,6 +278,7 @@ function applyLanguage(lang) {
     updateGallerySection(t);
     updateContactSection(t);
     updateFooter(t);
+    updateEngagement(t);
 }
 
 function updateNavigation(t) {
@@ -384,8 +395,8 @@ function updateNewsSection(t) {
     const title = document.querySelector('#news h2');
     if (title) title.textContent = t.news.title;
 
-    const emptyText = document.querySelector('#news .empty-section-text');
-    if (emptyText) emptyText.textContent = t.news.empty;
+    const newsText = document.querySelector('#news .news-text');
+    if (newsText) newsText.textContent = t.news.tapscn;
 }
 
 function updateInternshipSection(t) {
@@ -459,6 +470,15 @@ function updateContactSection(t) {
 function updateFooter(t) {
     const footerText = document.querySelector('footer p');
     if (footerText) footerText.textContent = t.footer.welcome;
+
+    const viewsLabel = document.querySelector('.footer-views-label');
+    if (viewsLabel) viewsLabel.textContent = t.footer.views;
+}
+
+function updateEngagement(t) {
+    const button = document.getElementById('profileLike');
+    const label = button?.querySelector('.profile-like-label');
+    if (label) label.textContent = button.getAttribute('aria-pressed') === 'true' ? t.engagement.liked : t.engagement.like;
 }
 
 function getCurrentTranslation() {

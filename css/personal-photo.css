@@ -21,6 +21,70 @@
     background: #ffffff;
 }
 
+.profile-like-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-like {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-width: 112px;
+    min-height: 36px;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid rgba(0, 86, 179, 0.25);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.84);
+    color: #0056b3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-like:hover:not(:disabled) {
+    background: rgba(0, 86, 179, 0.1);
+    border-color: #0056b3;
+}
+
+.profile-like:focus-visible {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+.profile-like[aria-pressed="true"] {
+    color: #c4355a;
+    border-color: rgba(196, 53, 90, 0.35);
+}
+
+.profile-like:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.profile-like-count {
+    min-width: 1ch;
+    font-variant-numeric: tabular-nums;
+}
+
+[data-theme="dark"] .profile-like {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(116, 192, 252, 0.4);
+    color: #74c0fc;
+}
+
+[data-theme="dark"] .profile-like:hover:not(:disabled) {
+    background: rgba(116, 192, 252, 0.16);
+}
+
+[data-theme="dark"] .profile-like[aria-pressed="true"] {
+    color: #ff8ca8;
+    border-color: rgba(255, 140, 168, 0.55);
+}
+
 /* Photo Overlay - Removed */
 
 /* Profile Info */

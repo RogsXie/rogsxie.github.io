@@ -85,7 +85,7 @@ const papersData = [
         type: "journal",
         publicationGroup: "firstSecondAuthor",
         doi: null,
-        pdf: "",
+        pdf: "https://www.sciencedirect.com/science/article/abs/pii/S1566253526007220",
         code: "https://github.com/RogsXie/TAPSCN",
         keywords: ["Hyperspectral, LiDAR, State space model, Text augmentation, Patch–scene collaborative learning, Classification"],
         // Model image fields

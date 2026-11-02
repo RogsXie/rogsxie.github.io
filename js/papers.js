@@ -82,10 +82,14 @@ const papersData = [
         venueUrl: "https://www.sciencedirect.com/journal/information-fusion",
         journalInfo: "(SCI, Q1, IF:17.4)",
         esiHighlyCited: false,
-        year: 2026,
+        // Use the assigned journal volume year for display and sorting.
+        // Crossref: https://api.crossref.org/works/10.1016/j.inffus.2026.104846
+        year: 2027,
+        volume: 139,
+        articleNumber: "104846",
         type: "journal",
         publicationGroup: "firstSecondAuthor",
-        doi: null,
+        doi: "10.1016/j.inffus.2026.104846",
         pdf: "https://www.sciencedirect.com/science/article/abs/pii/S1566253526007220",
         code: "https://github.com/RogsXie/TAPSCN",
         keywords: ["Hyperspectral, LiDAR, State space model, Text augmentation, Patch–scene collaborative learning, Classification"],
@@ -275,7 +279,7 @@ function createPaperCard(paper) {
                                 ${paper.venueUrl ?
                                     `<a href="${paper.venueUrl}" class="text-${venueColor}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: 500;">${paper.venue}</a>` :
                                     `<span class="text-${venueColor}">${paper.venue}</span>`
-                                }, ${paper.year}
+                                }, ${paper.year}${paper.volume ? `, Vol. ${paper.volume}` : ''}${paper.articleNumber ? `, Article ${paper.articleNumber}` : ''}
                                 ${paper.journalInfo ? `<span class="badge bg-success" style="font-size: 0.75em; font-weight: 500; margin-left: 8px;">${paper.journalInfo}</span>` : ''}
                                 ${paper.esiHighlyCited ? `<span class="badge bg-warning text-dark" style="font-size: 0.75em; font-weight: 600; margin-left: 8px;">${t.publications.esiHighlyCited}</span>` : ''}
                             </div>

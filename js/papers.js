@@ -1,6 +1,6 @@
 // ===== Publication Management System =====
 
-// Citation counts verified against Google Scholar on 2026-10-25.
+// Citation counts verified against Google Scholar on 2026-11-02 (Asia/Shanghai).
 // Sample publication data with model images
 const papersData = [
     {
@@ -23,7 +23,7 @@ const papersData = [
         modelImage: "images/models/DAHGMN.png",
         modelImageAlt: "Dual-Feature Attention Hybrid GCN Mamba Network Architecture",
         // Citation data
-        citations: 17,  // 手动更新的引用次数
+        citations: 20,  // 手动更新的引用次数
         googleScholarId: "citation_id_here",  // Google Scholar 文章ID（可选）
        
     },
